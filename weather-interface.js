@@ -9,8 +9,9 @@ $(document).ready(function() {
         format: 'json'
       },
       success: function(response) {
-        $('.showHumidity').text(`The humidity in ${city} is ${response.main.humidity}%`);
+        $('.showHumidity').text(`The humidity in ${city} is ${response.main.humidity}%`);  
         $('.showTemp').text(`The temperature in Kelvins is ${response.main.temp}.`);
+        $('.showSpeed').text(`The wind speed is ${response.wind.speed}.`);
       },
       error: function() {
         $('#errors').text("There was an error processing your request. Please try again.")
